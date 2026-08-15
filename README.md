@@ -17,9 +17,9 @@ By hooking directly into the Pl3xMap API, this plugin seamlessly manages player 
 
 ## Requirements
 
-* **Server Software:** Paper (or Bukkit/Spigot) 1.20+
+* **Server Software:** Paper (or Bukkit/Spigot) 1.21+
 * **Java:** Java 17 or higher
-* **Dependencies:** [Pl3xMap](https://modrinth.com/plugin/pl3xmap) (v1.20.4-476 or compatible)
+* **Dependencies:** [Pl3xMap](https://modrinth.com/plugin/pl3xmap) (1.21.11-544 or compatible)
 
 ---
 
