@@ -1,9 +1,9 @@
-package org.hax.mapHider.commands;
+package org.hax.maphider.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.hax.mapHider.MapHider;
+import org.hax.maphider.MapHider;
 
 public class ReloadCommand implements CommandExecutor {
     private final MapHider plugin;

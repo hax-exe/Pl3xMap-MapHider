@@ -1,8 +1,8 @@
-package org.hax.mapHider;
+package org.hax.maphider;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.hax.mapHider.commands.ReloadCommand;
-import org.hax.mapHider.util.VisibilityTask;
+import org.hax.maphider.commands.ReloadCommand;
+import org.hax.maphider.util.VisibilityTask;
 
 public class MapHider extends JavaPlugin {
 

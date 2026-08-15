@@ -1,7 +1,7 @@
 name: MapHider
 version: '${version}'
 
-main: org.hax.mapHider.MapHider
+main: org.hax.maphider.MapHider
 api-version: '1.21'
 depend:
   - Pl3xMap

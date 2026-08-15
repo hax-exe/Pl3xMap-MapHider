@@ -1,10 +1,10 @@
-package org.hax.mapHider.util;
+package org.hax.maphider.util;
 
 import net.pl3x.map.core.Pl3xMap;
 import net.pl3x.map.core.player.Player;
 import org.bukkit.Location;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.hax.mapHider.MapHider;
+import org.hax.maphider.MapHider;
 
 public class VisibilityTask extends BukkitRunnable{
     private final MapHider plugin;
