@@ -1,0 +1,20 @@
+name: MapHider
+version: '${version}'
+
+main: org.hax.mapHider.MapHider
+api-version: '1.21'
+depend:
+  - Pl3xMap
+load: STARTUP
+
+commands:
+  maphider:
+    description: Reload configuration
+    usage: /maphider reload
+
+permission:
+  maphider.reload:
+    description: Allows to reload maphider config
+    default: op
+
+authors: [ Hax ]
