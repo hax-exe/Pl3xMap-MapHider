@@ -1,7 +1,7 @@
 package org.hax.mapHider;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.hax.mapHider.commands.MapHiderCommand;
+import org.hax.mapHider.commands.ReloadCommand;
 import org.hax.mapHider.util.VisibilityTask;
 
 public class MapHider extends JavaPlugin {
@@ -13,7 +13,7 @@ public class MapHider extends JavaPlugin {
         // Config.yml generate
         saveDefaultConfig();
 
-        getCommand("maphider").setExecutor(new MapHiderCommand(this));
+        getCommand("maphider").setExecutor(new ReloadCommand(this));
 
         visibilityTask = new VisibilityTask(this);
         visibilityTask.runTaskTimer(this, 0L, 100L);

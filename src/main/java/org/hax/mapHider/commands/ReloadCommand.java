@@ -5,10 +5,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.hax.mapHider.MapHider;
 
-public class MapHiderCommand implements CommandExecutor {
+public class ReloadCommand implements CommandExecutor {
     private final MapHider plugin;
 
-    public MapHiderCommand(MapHider plugin) {
+    public ReloadCommand(MapHider plugin) {
         this.plugin = plugin;
     }
 
