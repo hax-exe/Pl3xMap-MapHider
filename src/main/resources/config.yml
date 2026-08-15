@@ -3,3 +3,6 @@
 # Only set this to true on dev to know if the plugin is working as expected.
 # Disable this setting on production to prevent log spamming.
 debug: false
+
+# Set this to how many blocks below the surface a player must be to be hidden
+depth-threshold: 8

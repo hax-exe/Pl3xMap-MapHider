@@ -18,16 +18,22 @@ public class VisibilityTask extends BukkitRunnable{
 
         boolean debug = plugin.getConfig().getBoolean("debug", false);
 
+        int depthThreshold = plugin.getConfig().getInt("depth-threshold", 8);
+
         for (org.bukkit.entity.Player bukkitPlayer : plugin.getServer().getOnlinePlayers()) {
-            checkAndToggleVisibility(bukkitPlayer, debug);
+            checkAndToggleVisibility(bukkitPlayer, debug, depthThreshold);
         }
     }
 
-    private void checkAndToggleVisibility(org.bukkit.entity.Player bukkitPlayer, boolean debug) {
+    private void checkAndToggleVisibility(org.bukkit.entity.Player bukkitPlayer, boolean debug, int depthThreshold) {
         Location loc = bukkitPlayer.getLocation();
 
-        // Define "underground" as 0 sky light and below sea level
-        boolean isUnderground = loc.getBlock().getLightFromSky() == 0 && loc.getY() < 50.0;
+        int highestYLevel = loc.getWorld().getHighestBlockYAt(loc);
+
+        double depthFromSurface = highestYLevel - loc.getY();
+
+        // Define "underground" as 0 skylight and below a certain level below the highest surface possible to the player
+        boolean isUnderground = loc.getBlock().getLightFromSky() == 0 && depthFromSurface < depthThreshold;
 
         // Fetch the player from Pl3xMap's registry
         Player mapPlayer = Pl3xMap.api().getPlayerRegistry().get(bukkitPlayer.getUniqueId());
