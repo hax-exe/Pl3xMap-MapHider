@@ -33,7 +33,7 @@ public class VisibilityTask extends BukkitRunnable{
         double depthFromSurface = highestYLevel - loc.getY();
 
         // Define "underground" as 0 skylight and below a certain level below the highest surface possible to the player
-        boolean isUnderground = loc.getBlock().getLightFromSky() == 0 && depthFromSurface < depthThreshold;
+        boolean isUnderground = depthFromSurface < depthThreshold;
 
         // Fetch the player from Pl3xMap's registry
         Player mapPlayer = Pl3xMap.api().getPlayerRegistry().get(bukkitPlayer.getUniqueId());
